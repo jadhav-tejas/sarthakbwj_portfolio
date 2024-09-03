@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 import '../Styles/navigation.styles.css';
 
 const Navigation = () => {
@@ -10,9 +10,9 @@ const Navigation = () => {
                 <h1 className="nav__name">Sarthak Bharadwaj</h1>
             </div>
             <div className="nav__right">
-                <a href="#yoga" className="nav__link">Yoga</a>
-                <a href="#permaculture" className="nav__link">Permaculture</a>
-                <a href="#contact" className="nav__link">Contact Me</a>
+                <Link to="/yoga" className="nav__link">Yoga</Link>
+                <Link to="/permaculture" className="nav__link">Permaculture</Link>
+                <Link to="/contact" className="nav__link">Contact Me</Link>
             </div>
         </nav>
         <Outlet />
