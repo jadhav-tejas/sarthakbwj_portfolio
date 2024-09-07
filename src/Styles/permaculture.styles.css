@@ -1,0 +1,14 @@
+ .permaculture-card {
+    display: flex;
+    flex-direction: row;
+    margin: 2%;
+    border: 1px solid #ddd; /* Optional: Adds a border around the card */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+    overflow: hidden; /* Optional: Ensures rounded corners work well */
+  }
+  
+  .permaculture-card-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }

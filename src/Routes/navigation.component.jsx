@@ -7,7 +7,7 @@ const Navigation = () => {
         <Fragment>
         <nav className="nav">
             <div className="nav__left">
-                <h1 className="nav__name">Sarthak Bharadwaj</h1>
+            <Link to="" className="nav__name">Sarthak Bharadwaj</Link>
             </div>
             <div className="nav__right">
                 <Link to="/yoga" className="nav__link">Yoga</Link>
