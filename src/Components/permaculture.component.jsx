@@ -1,30 +1,38 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import imageData from "../Utils/permacultureData";
-import { Card, Button } from 'react-bootstrap';
-import "../Styles/permaculture.styles.css"; // Make sure to create this CSS file
+import "../Styles/permaculture.styles.css";
 
-const Permaculture = ({ permacultureData }) => {
-    return (
-      <>
-        {imageData.map((image, index) => (
-          <Card className="permaculture-card" key={index}>
-            <Card.Img
-              variant="left"
-              src={require(`../Utils/permaculture_images/${image.blogSrc}`)}
-              alt={image.blogTitle}
-              className="permaculture-card-img"
-            />
-            <Card.Body>
-              <Card.Title>{image.blogTitle}</Card.Title>
-              <Card.Text>
-                {image.blogText}
-              </Card.Text>
-              <Button variant="primary">Read More</Button>
-            </Card.Body>
-          </Card>
-        ))}
-      </>
-    );
+const Permaculture = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (id) => {
+    navigate(`/blog/${id}`);
   };
-  
-  export default Permaculture;
+
+  return (
+    <div className="container">
+      {imageData.map((image, index) => (
+        <div onClick={() => handleClick(image.id)} className="horizontal-card" key={index}>
+          <img
+            src={require(`../Utils/permaculture_images/${image.blogSrc}`)}
+            alt={image.blogTitle}
+            className="horizontal-card-img"
+          />
+          <div className="horizontal-card-body">
+            <h2 className="horizontal-card-title">{image.blogTitle}</h2>
+            <p className="horizontal-card-text">{image.blogText}</p>
+            <button
+              className="horizontal-card-button"
+              onClick={() => handleClick(image.id)} // Pass the unique ID here
+            >
+              Read More
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Permaculture;

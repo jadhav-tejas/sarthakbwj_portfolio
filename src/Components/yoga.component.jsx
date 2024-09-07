@@ -4,7 +4,7 @@ import '../Styles/yoga.styles.css'; // Make sure to create this CSS file
 
 const Yoga = () => {
     return (
-        <div className="container yoga-container">
+        <div className="yoga-container">
             {imageData.map((image, index) => (
                 <div className="yoga-item" key={index}>
                     <img src={require(`../Utils/yoga_images/${image.src}`)} alt={image.title} />

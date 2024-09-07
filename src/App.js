@@ -4,6 +4,7 @@ import Home from "./Routes/home.component";
 import Footer from "./Components/footer.component";
 import Yoga from "./Components/yoga.component";
 import Permaculture from "./Components/permaculture.component";
+import BlogDetail from "./Components/blogDetail.component";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -15,8 +16,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="yoga" element={<Yoga />}/>
           <Route path="permaculture" element={<Permaculture />}/>
-          {/* <Route path="shop" element={<Shop />}/> */}
-          {/* <Route path="auth" element={<Authentication />}/> */}
+          <Route path="/blog/:id" element={<BlogDetail />} />
         </Route>
       </Routes>
       <Footer /> {/* Place the Footer component here */}
