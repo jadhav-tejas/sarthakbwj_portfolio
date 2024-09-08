@@ -6,6 +6,7 @@ import Yoga from "./Components/yoga.component";
 import Permaculture from "./Components/permaculture.component";
 import BlogDetail from "./Components/blogDetail.component";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Contact from "./Components/contact.component";
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="yoga" element={<Yoga />}/>
           <Route path="permaculture" element={<Permaculture />}/>
           <Route path="/blog/:id" element={<BlogDetail />} />
+          <Route path="contact" element={<Contact />}/>
         </Route>
       </Routes>
       <Footer /> {/* Place the Footer component here */}
