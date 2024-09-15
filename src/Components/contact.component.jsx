@@ -17,26 +17,28 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const data = JSON.stringify(formData, null, 2);
-    console.log('Submitted Data:', data);
-
-    fetch('/saveData', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: data,
-    })
-    .then(response => response.json())
-    .then(result => console.log('Data saved:', result))
-    .catch(error => console.error('Error saving data:', error));
+    console.log('Form Submitted:', formData);
+    // Netlify will handle the form submission automatically
   };
 
   return (
     <div className="contact-card">
-      <form className="contact-form" onSubmit={handleSubmit}>
+      <form
+        className="contact-form"
+        onSubmit={handleSubmit}
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
         <h2>Contact Me</h2>
+        
+        {/* Hidden input for Netlify honeypot */}
+        <input type="hidden" name="bot-field" />
+
+        {/* Hidden input for form name */}
+        <input type="hidden" name="form-name" value="contact" />
+
         <div className="form-group">
           <i className="fas fa-user"></i>
           <input
