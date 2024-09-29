@@ -52,12 +52,13 @@
   }
   
   .contact-form button {
-    background-color: #007bff;
+    background-color: #5cb85c;
     color: white;
     border: none;
     padding: 10px 15px;
     border-radius: 4px;
     cursor: pointer;
+    width: 30%;
   }
   
   .contact-form button:hover {

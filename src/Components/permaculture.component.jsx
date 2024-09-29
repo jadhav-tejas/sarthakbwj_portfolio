@@ -18,6 +18,13 @@ const Permaculture = () => {
           className="horizontal-card" 
           key={index}
         >
+          {image.blogSrc && (
+            <img 
+              src={require(`../Utils/permaculture_images/${image.blogSrc}`)}
+              alt={image.blogTitle} 
+              className="horizontal-card-img"
+            />
+          )}
           <div className="horizontal-card-body">
             <h2 className="horizontal-card-title">{image.blogTitle}</h2>
             <p className="horizontal-card-text">{image.blogText}</p>

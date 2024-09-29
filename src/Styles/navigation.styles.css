@@ -5,9 +5,9 @@
     padding: 1rem 2rem;
     background-color: #333;
     color: #fff;
-    position: sticky;  /* Makes the navbar sticky */
-    top: 0;  /* Sticks to the top of the page */
-    z-index: 1000;  /* Ensures the navbar stays above other content */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav__left {

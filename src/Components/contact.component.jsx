@@ -33,10 +33,8 @@ const Contact = () => {
       >
         <h2>Contact Me</h2>
         
-        {/* Hidden input for Netlify honeypot */}
         <input type="hidden" name="bot-field" />
 
-        {/* Hidden input for form name */}
         <input type="hidden" name="form-name" value="contact" />
 
         <div className="form-group">
